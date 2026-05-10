@@ -21,20 +21,6 @@ export const stats = [
 
 export const experience = [
   {
-    company: "Apple (I-Word)",
-    sub: "Premium Apple reseller — consumer electronics & services",
-    role: "Assistant Manager",
-    period: "May 2019 — Aug 2021",
-    location: "Noida, India",
-    type: "Full-time",
-    featured: true,
-    points: [
-      "Led a team of 15–20 staff with weekly training, performance feedback and 1:1 coaching.",
-      "Held daily standups with trade staff to delegate tasks and surface market trends.",
-      "Built loyalty programs that grew repeat purchases and reinforced brand allegiance.",
-    ],
-  },
-  {
     company: "Makunai Global",
     sub: "Noida-based SaaS company dealing in IT products",
     role: "Manager",
@@ -48,15 +34,15 @@ export const experience = [
       "Mentoring a team of sales associates on demo techniques and objection handling — measurable lift in overall team productivity.",
     ],
     clients: [
-      { name: "Curest Science",            scale: "300+ employees", deal: "₹1.5 Cr" },
-      { name: "Happy Valley Business School", scale: "Institution",  deal: "₹7 L+" },
-      { name: "Bamask Education",          scale: "40+ employees",  deal: "₹5 L"   },
-      { name: "Mind Brick",                scale: "20+ employees",  deal: "₹3.7 L" },
-      { name: "Kraftwali",                 scale: "1M Insta",       deal: "₹3 L"   },
-      { name: "Washmart",                  scale: "50+ employees",  deal: "₹2.5 L" },
-      { name: "Karmanya Corporation",      scale: "30+ employees",  deal: "₹1 L"   },
-      { name: "Syllabus of Life",          scale: "Individual",     deal: "—"      },
-      { name: "Trip India",                scale: "—",              deal: "—"      },
+      { name: "Curest Science", scale: "300+ employees", deal: "₹1.5 Cr" },
+      { name: "Happy Valley Business School", scale: "Institution", deal: "₹7 L+" },
+      { name: "Bamask Education", scale: "40+ employees", deal: "₹5 L" },
+      { name: "Mind Brick", scale: "20+ employees", deal: "₹3.7 L" },
+      { name: "Kraftwali", scale: "1M Insta", deal: "₹3 L" },
+      { name: "Washmart", scale: "50+ employees", deal: "₹2.5 L" },
+      { name: "Karmanya Corporation", scale: "30+ employees", deal: "₹1 L" },
+      { name: "Syllabus of Life", scale: "Individual", deal: "—" },
+      { name: "Trip India", scale: "—", deal: "—" },
     ],
   },
   {
@@ -83,6 +69,20 @@ export const experience = [
       "Enhanced student development by 25% by leading 15+ group counseling sessions in a safe communication space.",
       "Analysed student performance data to identify intervention areas and tailor program fit.",
       "Exceeded sales and customer-service KPIs every cycle.",
+    ],
+  },
+  {
+    company: "Apple (I-Word)",
+    sub: "Premium Apple reseller — consumer electronics & services",
+    role: "Assistant Manager",
+    period: "May 2019 — Aug 2021",
+    location: "Noida, India",
+    type: "Full-time",
+    featured: true,
+    points: [
+      "Led a team of 15–20 staff with weekly training, performance feedback and 1:1 coaching.",
+      "Held daily standups with trade staff to delegate tasks and surface market trends.",
+      "Built loyalty programs that grew repeat purchases and reinforced brand allegiance.",
     ],
   },
 ]
