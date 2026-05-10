@@ -108,24 +108,36 @@ export const projects = [
   {
     name: "Technical Tuition Centre",
     role: "Founder",
-    period: "Feb 2023 — Present",
+    period: "Founded 2021",
+    accent: "EdTech · Operations",
     blurb:
-      "A skill-up startup for working professionals — personality development and office-skill programs, designed for evenings and weekends.",
+      "EdTech platform for working professionals and learners across India — personality development, office skills and exam-prep tracks, delivered through a distributed centre model.",
+    stats: [
+      { value: "8", label: "States live" },
+      { value: "₹10L+", label: "Revenue" },
+      { value: "2021", label: "Founded" },
+    ],
+    verticals: ["Personality Development", "Office Skills", "Exam Prep"],
     tags: ["Company Profiling", "Management", "Operations"],
     cta: "Visit site",
     href: "https://sites.google.com/view/technical-tution-centre/home",
-    accent: "Startup · Education",
   },
   {
     name: "Zestertech",
-    role: "Content & Growth Lead",
-    period: "Project",
+    role: "Co-founder · Growth",
+    period: "Founded 2024",
+    accent: "Digital Marketing · Agency",
     blurb:
-      "Led content strategy and brand positioning for client work — high-engagement digital assets and a content calendar across LinkedIn, Instagram and Google Business to build sustainable online communities. Streamlined the lead journey by integrating marketing automation with performance ads.",
-    tags: ["Web Development", "SEO", "Brand & Content"],
+      "Digital marketing brand shipping web, growth and brand work across e-commerce, real estate and personal portfolios. Lead generation engine built on content, SEO and performance ads — with employment generation as a stated outcome.",
+    stats: [
+      { value: "500+", label: "Projects shipped" },
+      { value: "₹50L+", label: "Revenue" },
+      { value: "2024", label: "Founded" },
+    ],
+    verticals: ["E-commerce", "Real Estate", "Personal Portfolio"],
+    tags: ["Web Development", "SEO", "Brand & Content", "Employment Generation"],
     cta: "View Zestertech",
     href: "https://www.zestertech.com/career",
-    accent: "Agency · Growth",
   },
 ]
 

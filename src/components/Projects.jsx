@@ -40,6 +40,33 @@ function Card({ p, i }) {
           {p.blurb}
         </p>
 
+        {p.stats && (
+          <ul className="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
+            {p.stats.map((s) => (
+              <li key={s.label} className="rounded-xl border hairline px-3 py-2.5">
+                <p className="font-display text-paper text-base sm:text-lg tabular-nums">{s.value}</p>
+                <p className="mt-0.5 text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-paper/50">
+                  {s.label}
+                </p>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {p.verticals && (
+          <div className="mt-5">
+            <p className="text-[10px] tracking-[0.28em] uppercase text-paper/45">Verticals</p>
+            <ul className="mt-2 flex flex-wrap gap-x-3 gap-y-1.5 text-[13px] text-paper/80">
+              {p.verticals.map((v, i) => (
+                <li key={v} className="flex items-center gap-3">
+                  {i > 0 && <span aria-hidden className="text-gold/40 text-xs">·</span>}
+                  {v}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         <ul className="mt-5 flex flex-wrap gap-2">
           {p.tags.map((t) => (
             <li
