@@ -4,7 +4,7 @@ import { profile } from '../data'
 function FooterBase() {
   return (
     <footer className="border-t hairline">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-10 flex flex-col md:flex-row gap-4 items-start md:items-center justify-between text-sm">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-10 py-8 sm:py-10 flex flex-col md:flex-row gap-4 items-start md:items-center justify-between text-sm">
         <p className="text-paper/55">
           © {new Date().getFullYear()} {profile.name}. Crafted in {profile.location}.
         </p>

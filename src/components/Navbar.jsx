@@ -15,6 +15,18 @@ function NavbarBase() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    document.body.classList.toggle('no-scroll', open)
+    return () => document.body.classList.remove('no-scroll')
+  }, [open])
+
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)')
+    const onChange = (e) => { if (e.matches) setOpen(false) }
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
+  }, [])
+
   return (
     <motion.header
       initial={{ y: -40, opacity: 0 }}
@@ -26,7 +38,7 @@ function NavbarBase() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-10 h-16 flex items-center justify-between">
         <a href="#home" className="group flex items-center gap-2.5">
           <span className="relative w-11 h-11 rounded-full overflow-hidden ring-1 ring-gold/50 shadow-[0_0_0_3px_rgba(11,11,15,1)]">
             <img src="/navneet.jpeg" alt="" width="44" height="44" loading="eager" decoding="async" className="w-full h-full object-cover object-[center_15%]" />
@@ -89,9 +101,9 @@ function NavbarBase() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="md:hidden overflow-hidden border-t hairline bg-ink/95 backdrop-blur-xl"
+            className="md:hidden overflow-hidden border-t hairline bg-ink/95 backdrop-blur-xl max-h-[calc(100vh-4rem)] overflow-y-auto"
           >
-            <ul className="px-6 py-4 flex flex-col gap-1">
+            <ul className="px-5 sm:px-6 py-4 flex flex-col gap-1">
               {sections.map((s) => (
                 <li key={s.id}>
                   <a

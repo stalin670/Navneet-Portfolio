@@ -10,23 +10,23 @@ function Item({ item, i }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-12% 0px' }}
       transition={{ duration: 0.8, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative grid md:grid-cols-12 gap-6 md:gap-10 py-10 border-t hairline first:border-t-0"
+      className="group relative grid md:grid-cols-12 gap-5 md:gap-10 py-8 sm:py-10 border-t hairline first:border-t-0"
     >
       {/* timeline dot */}
       <div aria-hidden className="hidden md:block absolute left-[calc(33.33%-5px)] top-10 w-2.5 h-2.5 rounded-full bg-gold ring-4 ring-ink" />
 
-      <div className="md:col-span-4 flex md:flex-col md:items-start gap-3">
-        <p className={`font-display text-lg ${item.current ? 'text-gold' : 'text-paper/80'}`}>
+      <div className="md:col-span-4 flex flex-wrap items-baseline md:flex-col md:items-start gap-x-3 gap-y-2">
+        <p className={`font-display text-base sm:text-lg ${item.current ? 'text-gold' : 'text-paper/80'}`}>
           {item.period}
         </p>
-        <span className="text-xs tracking-[0.22em] uppercase text-paper/45">
+        <span className="text-[10px] sm:text-xs tracking-[0.22em] uppercase text-paper/45">
           {item.location} · {item.type}
         </span>
       </div>
 
       <div className="md:col-span-8">
-        <div className="flex items-baseline justify-between gap-4 flex-wrap">
-          <h3 className="font-display text-3xl md:text-4xl text-paper leading-tight tracking-[-0.01em]">
+        <div className="flex items-baseline justify-between gap-3 flex-wrap">
+          <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-paper leading-tight tracking-[-0.01em]">
             {item.role}
           </h3>
           {item.current && (
@@ -36,6 +36,12 @@ function Item({ item, i }) {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
               </span>
               Now
+            </span>
+          )}
+          {item.featured && (
+            <span className="inline-flex items-center gap-2 text-[10px] tracking-[0.3em] uppercase text-gold px-2.5 py-1 rounded-full border border-gold/40 bg-gold/5">
+              <span aria-hidden></span>
+              Featured
             </span>
           )}
         </div>
@@ -65,7 +71,7 @@ function ExperienceBase() {
       id="experience"
       eyebrow="Experience"
       title={<>A track record built one quota at a time.</>}
-      kicker="From premium retail floors at Apple, to EdTech rooms at BYJU'S, to credit-card desks at American Express — every role taught me a different muscle of the sale."
+      kicker="Ordered by craft, not calendar — starting with the premium retail floors at Apple, then the SaaS rooms at Makunai, the credit-card desks at American Express, and the EdTech consults at BYJU'S."
     >
       <div className="relative">
         {/* vertical rail */}

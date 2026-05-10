@@ -4,12 +4,18 @@ import Lenis from 'lenis'
 export function useLenis() {
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches
+
     const lenis = new Lenis({
-      duration: 1.15,
+      duration: isTouch ? 0.9 : 1.15,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      lerp: 0.09,
+      lerp: isTouch ? 0.12 : 0.09,
+      syncTouch: false,
+      touchMultiplier: 1.6,
     })
+
     let raf
     const tick = (time) => {
       lenis.raf(time)
@@ -24,7 +30,8 @@ export function useLenis() {
       const el = document.getElementById(id)
       if (!el) return
       e.preventDefault()
-      lenis.scrollTo(el, { offset: -72, duration: 1.4 })
+      const offset = window.innerWidth < 768 ? -64 : -72
+      lenis.scrollTo(el, { offset, duration: isTouch ? 1.0 : 1.4 })
     }
     document.addEventListener('click', onAnchor)
     return () => {

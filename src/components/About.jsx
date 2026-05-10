@@ -17,7 +17,7 @@ function AboutBase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-10% 0px' }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="text-paper/80 text-xl lg:text-2xl leading-[1.5] font-display font-light text-balance"
+            className="text-paper/80 text-lg sm:text-xl lg:text-2xl leading-[1.5] font-display font-light text-balance"
           >
             {profile.bio}
           </motion.p>
@@ -29,7 +29,7 @@ function AboutBase() {
             transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="mt-10 pl-6 border-l-2 border-gold/60"
           >
-            <p className="font-display italic text-paper/85 text-2xl lg:text-3xl leading-snug">
+            <p className="font-display italic text-paper/85 text-xl sm:text-2xl lg:text-3xl leading-snug">
               "{profile.tagline}"
             </p>
           </motion.blockquote>

@@ -27,8 +27,8 @@ function HeroBase() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-20 lg:pt-40 lg:pb-28">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-end">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-10 pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-28">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-14 items-end">
           {/* Left — type */}
           <div className="lg:col-span-7 relative">
             <motion.p
@@ -47,7 +47,7 @@ function HeroBase() {
               initial="hidden"
               animate="show"
               custom={1}
-              className="mt-6 font-display font-light leading-[0.92] tracking-[-0.02em] text-paper text-[clamp(3.2rem,10vw,8.5rem)]"
+              className="mt-6 font-display font-light leading-[0.92] tracking-[-0.02em] text-paper text-[clamp(2.75rem,12vw,8.5rem)]"
             >
               Navneet
               <br />
@@ -59,7 +59,7 @@ function HeroBase() {
               initial="hidden"
               animate="show"
               custom={2}
-              className="mt-8 max-w-xl text-paper/70 text-lg leading-relaxed text-pretty"
+              className="mt-7 max-w-xl text-paper/70 text-base sm:text-lg leading-relaxed text-pretty"
             >
               {profile.tagline2}. Currently <span className="text-paper">Manager at Makunai Global, Noida</span> —
               previously American Express, BYJU'S and Apple.
@@ -70,18 +70,18 @@ function HeroBase() {
               initial="hidden"
               animate="show"
               custom={3}
-              className="mt-10 flex flex-wrap items-center gap-3"
+              className="mt-9 flex flex-wrap items-center gap-3"
             >
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-gold text-ink font-medium hover:bg-gold-bright transition-colors"
+                className="group inline-flex items-center justify-center gap-3 w-full sm:w-auto px-6 py-3.5 rounded-full bg-gold text-ink font-medium hover:bg-gold-bright transition-colors"
               >
                 Book a mentorship call
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <a
                 href="#experience"
-                className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full border hairline text-paper/85 hover:text-paper hover:border-gold/40 transition-colors"
+                className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-6 py-3.5 rounded-full border hairline text-paper/85 hover:text-paper hover:border-gold/40 transition-colors"
               >
                 See journey
               </a>
@@ -95,7 +95,7 @@ function HeroBase() {
             transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative aspect-[4/5] max-w-md mx-auto lg:ml-auto">
+            <div className="relative aspect-[4/5] w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto lg:ml-auto">
               {/* layered frames */}
               <div className="absolute -inset-3 border hairline rounded-[2rem] rotate-[1.5deg]" />
               <div className="absolute -inset-1 border border-gold/30 rounded-[1.75rem] -rotate-[1deg]" />
@@ -127,14 +127,17 @@ function HeroBase() {
           initial="hidden"
           animate="show"
           custom={5}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 border-y hairline divide-x divide-paper/10"
+          className="mt-16 sm:mt-20 grid grid-cols-2 md:grid-cols-4 border-y hairline divide-x divide-paper/10"
         >
-          {stats.map((s) => (
-            <div key={s.label} className="px-5 py-6">
-              <p className="font-display text-3xl md:text-4xl text-paper tabular-nums">
+          {stats.map((s, i) => (
+            <div
+              key={s.label}
+              className={`px-4 py-5 sm:px-5 sm:py-6 ${i >= 2 ? 'border-t hairline md:border-t-0' : ''}`}
+            >
+              <p className="font-display text-2xl sm:text-3xl md:text-4xl text-paper tabular-nums">
                 <CountUp value={s.value} />
               </p>
-              <p className="mt-1 text-xs tracking-[0.2em] uppercase text-paper/55">{s.label}</p>
+              <p className="mt-1 text-[10px] sm:text-xs tracking-[0.2em] uppercase text-paper/55">{s.label}</p>
             </div>
           ))}
         </motion.div>
@@ -152,11 +155,11 @@ function HeroBase() {
             <span className="text-[10px] tracking-[0.32em] uppercase text-paper/45">Floors I've sold on</span>
             <span className="flex-1 h-px bg-paper/10" />
           </div>
-          <div className="marquee-track flex whitespace-nowrap gap-14 font-display italic text-paper/40 text-2xl md:text-3xl">
+          <div className="marquee-track flex whitespace-nowrap gap-10 sm:gap-14 font-display italic text-paper/40 text-xl sm:text-2xl md:text-3xl">
             {Array.from({ length: 2 }).map((_, k) => (
-              <div key={k} className="flex gap-14 items-center">
+              <div key={k} className="flex gap-10 sm:gap-14 items-center">
                 {['Makunai Global', 'American Express', "BYJU'S", 'Apple', 'Premium Retail', 'SaaS B2B'].map((w) => (
-                  <span key={w + k} className="flex items-center gap-14">
+                  <span key={w + k} className="flex items-center gap-10 sm:gap-14">
                     {w}
                     <span aria-hidden className="text-gold/50 text-base not-italic">✦</span>
                   </span>

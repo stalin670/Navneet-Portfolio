@@ -18,6 +18,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
   }
   body {
     background: var(--color-ink);
@@ -25,6 +26,11 @@
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
     overflow-x: hidden;
+    overscroll-behavior-y: none;
+  }
+  body.no-scroll {
+    overflow: hidden;
+    touch-action: none;
   }
   ::selection {
     background: var(--color-gold);
@@ -34,6 +40,22 @@
   ::-webkit-scrollbar-track { background: #0B0B0F; }
   ::-webkit-scrollbar-thumb { background: #2a2a33; border-radius: 8px; }
   ::-webkit-scrollbar-thumb:hover { background: var(--color-gold); }
+
+  @media (max-width: 768px) {
+    ::-webkit-scrollbar { width: 0; height: 0; }
+    html { scrollbar-width: none; }
+  }
+
+  img, video { max-width: 100%; height: auto; }
+
+  a, button { -webkit-tap-highlight-color: transparent; }
+}
+
+@layer utilities {
+  .safe-px {
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+  }
 }
 
 @layer utilities {

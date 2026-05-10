@@ -18,17 +18,17 @@ function EducationBase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="lg:col-span-7 relative overflow-hidden rounded-2xl border hairline bg-ink-2/40 p-7 lg:p-9"
+          className="lg:col-span-7 relative overflow-hidden rounded-2xl border hairline bg-ink-2/40 p-5 sm:p-7 lg:p-9"
         >
           <span aria-hidden className="absolute -top-24 -left-16 w-72 h-72 rounded-full bg-gold/10 blur-3xl" />
           <span className="relative inline-flex items-center gap-2 text-[10px] tracking-[0.32em] uppercase text-gold">
             <span className="w-6 h-px bg-gold/60" />
             Master's · {main.period}
           </span>
-          <h3 className="relative mt-4 font-display text-3xl lg:text-5xl text-paper leading-[1.05] tracking-[-0.01em]">
+          <h3 className="relative mt-4 font-display text-2xl sm:text-3xl lg:text-5xl text-paper leading-[1.05] tracking-[-0.01em]">
             {main.school}
           </h3>
-          <p className="relative mt-4 text-paper/75 text-lg">
+          <p className="relative mt-3 sm:mt-4 text-paper/75 text-base sm:text-lg">
             {main.degree}
           </p>
           {main.note && (
@@ -36,15 +36,15 @@ function EducationBase() {
               ✦ {main.note}
             </p>
           )}
-          <div className="relative mt-7 grid grid-cols-3 gap-3 text-[13px] max-w-md">
+          <div className="relative mt-6 sm:mt-7 grid grid-cols-3 gap-2 sm:gap-3 text-[12px] sm:text-[13px] max-w-md">
             {[
               ['Field', 'History'],
               ['Honour', 'Gold Medalist'],
               ['Strand', 'Dev. Ethics'],
             ].map(([k, v]) => (
-              <div key={k} className="rounded-xl border hairline px-3.5 py-3">
-                <p className="text-[10px] tracking-[0.25em] uppercase text-paper/45">{k}</p>
-                <p className="mt-1 text-paper">{v}</p>
+              <div key={k} className="rounded-xl border hairline px-3 sm:px-3.5 py-2.5 sm:py-3">
+                <p className="text-[9px] sm:text-[10px] tracking-[0.25em] uppercase text-paper/45">{k}</p>
+                <p className="mt-1 text-paper text-xs sm:text-sm">{v}</p>
               </div>
             ))}
           </div>
@@ -56,7 +56,7 @@ function EducationBase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="lg:col-span-5 rounded-2xl border hairline bg-ink-2/40 p-6 lg:p-7"
+          className="lg:col-span-5 rounded-2xl border hairline bg-ink-2/40 p-5 sm:p-6 lg:p-7"
         >
           <p className="text-xs tracking-[0.28em] uppercase text-gold">Recognitions</p>
           <ul className="mt-5 divide-y divide-paper/10">

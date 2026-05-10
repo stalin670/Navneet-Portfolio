@@ -22,6 +22,20 @@ export const stats = [
 
 export const experience = [
   {
+    company: "Apple (I-Word)",
+    sub: "Premium Apple reseller — consumer electronics & services",
+    role: "Assistant Manager",
+    period: "May 2019 — Aug 2021",
+    location: "Noida, India",
+    type: "Full-time",
+    featured: true,
+    points: [
+      "Led a team of 15–20 staff with weekly training, performance feedback and 1:1 coaching.",
+      "Held daily standups with trade staff to delegate tasks and surface market trends.",
+      "Built loyalty programs that grew repeat purchases and reinforced brand allegiance.",
+    ],
+  },
+  {
     company: "Makunai Global",
     sub: "Noida-based SaaS company dealing in IT products",
     role: "Manager",
@@ -59,19 +73,6 @@ export const experience = [
       "Enhanced student development by 25% by leading 15+ group counseling sessions in a safe communication space.",
       "Analysed student performance data to identify intervention areas and tailor program fit.",
       "Exceeded sales and customer-service KPIs every cycle.",
-    ],
-  },
-  {
-    company: "Apple (I-Word)",
-    sub: "Premium Apple reseller — consumer electronics & services",
-    role: "Assistant Manager",
-    period: "May 2019 — Aug 2021",
-    location: "Noida, India",
-    type: "Full-time",
-    points: [
-      "Led a team of 15–20 staff with weekly training, performance feedback and 1:1 coaching.",
-      "Held daily standups with trade staff to delegate tasks and surface market trends.",
-      "Built loyalty programs that grew repeat purchases and reinforced brand allegiance.",
     ],
   },
 ]
