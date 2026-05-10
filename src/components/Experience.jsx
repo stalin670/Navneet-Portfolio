@@ -60,6 +60,37 @@ function Item({ item, i }) {
             </li>
           ))}
         </ul>
+
+        {item.clients && (
+          <div className="mt-7 rounded-2xl border hairline bg-ink-2/40 overflow-hidden">
+            <div className="flex items-center justify-between gap-3 px-4 sm:px-5 py-3 border-b hairline">
+              <p className="text-[10px] sm:text-xs tracking-[0.28em] uppercase text-gold">
+                Clients I brought in
+              </p>
+              <p className="text-[10px] tracking-[0.22em] uppercase text-paper/45">
+                {item.clients.length} accounts
+              </p>
+            </div>
+            <ul className="divide-y divide-paper/10">
+              {item.clients.map((c) => (
+                <li
+                  key={c.name}
+                  className="grid grid-cols-12 gap-2 sm:gap-4 px-4 sm:px-5 py-3 text-[13px] sm:text-sm items-center"
+                >
+                  <span className="col-span-6 sm:col-span-5 font-display text-paper truncate">
+                    {c.name}
+                  </span>
+                  <span className="col-span-3 sm:col-span-4 text-paper/55 text-[11px] sm:text-xs tracking-wide truncate">
+                    {c.scale}
+                  </span>
+                  <span className="col-span-3 text-right tabular-nums text-gold font-medium">
+                    {c.deal}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </motion.article>
   )

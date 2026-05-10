@@ -47,6 +47,17 @@ export const experience = [
       "Leading deep-dive discovery sessions with prospective clients, mapping technical requirements and aligning IT solutions to industry-specific pain points.",
       "Mentoring a team of sales associates on demo techniques and objection handling — measurable lift in overall team productivity.",
     ],
+    clients: [
+      { name: "Curest Science",            scale: "300+ employees", deal: "₹1.5 Cr" },
+      { name: "Happy Valley Business School", scale: "Institution",  deal: "₹7 L+" },
+      { name: "Bamask Education",          scale: "40+ employees",  deal: "₹5 L"   },
+      { name: "Mind Brick",                scale: "20+ employees",  deal: "₹3.7 L" },
+      { name: "Kraftwali",                 scale: "1M Insta",       deal: "₹3 L"   },
+      { name: "Washmart",                  scale: "50+ employees",  deal: "₹2.5 L" },
+      { name: "Karmanya Corporation",      scale: "30+ employees",  deal: "₹1 L"   },
+      { name: "Syllabus of Life",          scale: "Individual",     deal: "—"      },
+      { name: "Trip India",                scale: "—",              deal: "—"      },
+    ],
   },
   {
     company: "American Express",
