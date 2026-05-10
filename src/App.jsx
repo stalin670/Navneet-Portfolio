@@ -7,7 +7,7 @@ import { useLenis } from './hooks/useLenis'
 const About = lazy(() => import('./components/About'))
 const Experience = lazy(() => import('./components/Experience'))
 const Mentorship = lazy(() => import('./components/Mentorship'))
-const Resume = lazy(() => import('./components/Resume'))
+const Projects = lazy(() => import('./components/Projects'))
 const Education = lazy(() => import('./components/Education'))
 const Contact = lazy(() => import('./components/Contact'))
 const Footer = lazy(() => import('./components/Footer'))
@@ -26,7 +26,7 @@ export default function App() {
           <About />
           <Experience />
           <Mentorship />
-          <Resume />
+          <Projects />
           <Education />
           <Contact />
           <Footer />

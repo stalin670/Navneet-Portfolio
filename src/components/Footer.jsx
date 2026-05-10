@@ -11,7 +11,6 @@ function FooterBase() {
         <div className="flex items-center gap-5 text-paper/65 flex-wrap">
           <a href={`mailto:${profile.email}`} className="hover:text-gold transition-colors">Email</a>
           <a href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-gold transition-colors">LinkedIn</a>
-          <a href={profile.resume} target="_blank" rel="noreferrer" className="hover:text-gold transition-colors">Resume</a>
           <a href="#home" className="hover:text-gold transition-colors">Back to top ↑</a>
         </div>
       </div>

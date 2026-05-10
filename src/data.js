@@ -7,7 +7,6 @@ export const profile = {
   phone: "+91 93106 50363",
   phoneRaw: "+919310650363",
   linkedin: "https://www.linkedin.com/in/singh-navneet-9063391bb/",
-  resume: "/Navneet-Singh-Resume.pdf",
   photo: "/navneet.jpeg",
   bio: "Goal-oriented Sales & Marketing Specialist with 6+ years driving revenue and cutting cost across SaaS, FinTech, EdTech and premium retail. I design training programs, run tight pipelines, and turn high-pressure rooms into closed deals. Currently leading sales as Manager at Makunai Global, Noida.",
   tagline: "I turn conversations into conversions.",
@@ -105,6 +104,31 @@ export const languages = [
   { name: "Slavic", level: "Intermediate", value: 55 },
 ]
 
+export const projects = [
+  {
+    name: "Technical Tuition Centre",
+    role: "Founder",
+    period: "Feb 2023 — Present",
+    blurb:
+      "A skill-up startup for working professionals — personality development and office-skill programs, designed for evenings and weekends.",
+    tags: ["Company Profiling", "Management", "Operations"],
+    cta: "Visit site",
+    href: "https://sites.google.com/view/technical-tution-centre/home",
+    accent: "Startup · Education",
+  },
+  {
+    name: "Zestertech",
+    role: "Content & Growth Lead",
+    period: "Project",
+    blurb:
+      "Led content strategy and brand positioning for client work — high-engagement digital assets and a content calendar across LinkedIn, Instagram and Google Business to build sustainable online communities. Streamlined the lead journey by integrating marketing automation with performance ads.",
+    tags: ["Web Development", "SEO", "Brand & Content"],
+    cta: "View Zestertech",
+    href: "https://www.zestertech.com/career",
+    accent: "Agency · Growth",
+  },
+]
+
 export const mentorship = {
   intro:
     "Mentorship is where I spend my best hours. If you are an SDR fighting for your first quota, a founder hiring sales 0→1, or an exec rebuilding a team — these are the rooms I help in.",
@@ -169,7 +193,7 @@ export const sections = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "mentorship", label: "Mentorship" },
-  { id: "resume", label: "Resume" },
+  { id: "projects", label: "Projects" },
   { id: "education", label: "Education" },
   { id: "contact", label: "Contact" },
 ]
