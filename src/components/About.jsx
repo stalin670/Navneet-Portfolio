@@ -8,7 +8,7 @@ function AboutBase() {
     <Section
       id="about"
       eyebrow="About"
-      title={<>Seven years on the floor — and still <em className="italic text-gold">obsessed</em> with the close.</>}
+      title={<>Seven years on the floor and still. <em className="italic text-gold">obsessed</em> with the close.</>}
     >
       <div className="grid lg:grid-cols-12 gap-10 lg:gap-14">
         <div className="lg:col-span-7">
